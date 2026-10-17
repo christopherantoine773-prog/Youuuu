@@ -1,59 +1,46 @@
-# Between Worlds — A Cosmic Journey
+# Between Worlds — Realism Update
 
-> An atmospheric interactive story built with Three.js: ancient forest ruins, a playful **YES / NO** choice, a rainy melancholic path, Saturn with a ring of hearts, the solar system, and a spiral-galaxy finale.
+A Three.js interactive cosmic fable with the YES/NO choice, a melancholy rain scene, Saturn and a ring of hearts, the solar system, and a Milky Way finale.
 
 ## Visual preview
 
-![Between Worlds visual preview — mystical ruins, Saturn, solar system, Milky Way and TikTok showcase](assets/between-worlds-preview.png)
+![Project concept preview](assets/between-worlds-preview.png)
 
-The image above is a **concept preview** of the intended visual direction and the project's story scenes. It is a showcase image, not a live screenshot of the running site.
+This is a concept showcase image, not a screenshot of the live page.
 
-## Story scenes
+## What was improved in this build
 
-1. **The Ancient Grove** — moonlit ruins, stone pillars, foliage, fireflies and atmospheric lighting.
-2. **The Melancholic Path** — a stormy, blue-grey version of the grove with animated rain and lightning flashes.
-3. **Saturn & the Ring of Hearts** — a 3D planet, layered rings, hundreds of glowing heart shapes and shooting-star streaks.
-4. **The Solar System** — the Sun and eight animated planets moving along orbital paths.
-5. **The Milky Way** — a wide spiral galaxy made from thousands of colored particles.
+- Reworked planetary procedural textures to add more broken, turbulent cloud belts instead of simple flat stripes.
+- Higher-detail sphere geometry for Saturn and the solar-system planets.
+- Added cloud-style textures for Venus, Uranus and Neptune, plus distinct Earth, Mars, Mercury and Jupiter maps.
+- Layered Saturn rings with finer ring bands.
+- Added a soft procedural nebula behind the space scenes.
+- Improved the forest palette with darker bark, richer foliage, low ferns and scattered leaf litter.
+- Preserved the existing YES/NO interactions, rain scene, story phases, progress indicator, and restart button.
 
-## How to interact
+## Story phases
 
-- Select **Yes** to begin the cosmic journey.
-- Try **No**; it dodges the pointer at first, then becomes selectable and opens the rain scene.
-- Use **Continue** to move through Saturn, the solar system, and the galaxy.
-- In the Saturn scene, tap the planet or ring to reveal the solar system.
-- In the solar-system scene, tap the starfield to reveal the galaxy.
-- Choose **Start again** to return to the beginning.
-
-## Technology
-
-- Three.js (WebGL)
-- HTML, CSS and JavaScript modules
-- Procedural 2048 × 2048 surface textures
-- Responsive rendering with a device-dependent pixel ratio
-- Google Fonts: Cinzel and Manrope
-
-> **Quality note:** the renderer and procedural textures aim for a sharper, more detailed presentation, but the result is not a literal 4K photographic render. Final sharpness and frame rate depend on the device and browser. Planet textures in this build are procedural approximations rather than official space-agency imagery.
-
-## Run the project
-
-Because the page uses JavaScript modules, run it through a web server rather than opening the HTML file directly:
-
-```bash
-python -m http.server 8000
-```
-
-Then visit `http://localhost:8000`.
-
-You can also deploy the folder to GitHub Pages, Netlify, or another static host. An internet connection is required to load Three.js and the web fonts.
+1. **The Ancient Grove** — moonlit ruins, vegetation, moss and fireflies.
+2. **The Melancholic Path** — cold rain, fog and lightning flashes.
+3. **Saturn & the Ring of Hearts** — Saturn, layered rings, glowing hearts and shooting stars.
+4. **The Solar System** — the Sun and eight orbiting planets.
+5. **The Milky Way** — a spiral galaxy of colored star particles.
 
 ## Creator
 
 **TikTok:** [@dope__pain](https://www.tiktok.com/@dope__pain)  
 **Display name:** Dope Pain • Official
 
-Follow the creator for more projects, creative experiments, and updates.
+## Run locally
 
----
+Serve this folder over HTTP (ES modules require a web server):
 
-**BETWEEN WORLDS — DREAM • CREATE • EXPLORE**
+```bash
+python -m http.server 8000
+```
+
+Open `http://localhost:8000`, or deploy the folder to GitHub Pages / Netlify. Three.js and Google Fonts load from external CDNs, so an internet connection is required.
+
+## Important quality note
+
+The scene uses procedural textures and WebGL rendering, not official NASA photographic maps. Rendering sharpness depends on the device, browser, screen and GPU; this is a visual upgrade, not a guaranteed native 4K render.
